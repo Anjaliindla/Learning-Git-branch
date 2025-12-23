@@ -76,6 +76,88 @@ git checkout bugfix
 git rebase main
 ```
 
+LEVEL - 2
+
+ Level 1: Detach `HEAD`
+
+In this level, you learn about **detached HEAD state**.
+Normally, `HEAD` points to a branch. When you checkout a specific commit instead of a branch, `HEAD` becomes detached and points directly to that commit.
+
+This is useful for:
+
+* Inspecting old commits
+* Debugging without affecting branches
+
+ <img width="1920" height="1020" alt="Screenshot 2025-12-17 110951" src="https://github.com/user-attachments/assets/52ebe8f5-2f0e-4fa4-9a6b-03a3134f1079" />
+
+
+ Commands Used
+
+```bash
+git branch bugfix
+git checkout c4
+```
+
+
+ Level 2: Relative Refs (`^`)
+
+
+This level introduces **relative references** using the caret (`^`) operator.
+The `^` symbol means “parent commit”.
+
+<img width="1920" height="1020" alt="Screenshot 2025-12-17 111057" src="https://github.com/user-attachments/assets/758bfd2c-d521-4a4b-bb0e-7c783f7bcf47" />
+
+
+ Commands Used
+
+```bash
+git checkout c3
+```
+
+
+ Level 3: Relative Refs #2 (`~`)
+
+
+This level focuses on the tilde (`~`) operator and **forcing branches** to point to specific commits.
+
+Examples:
+
+* `HEAD~1` → one commit before HEAD
+* `HEAD~2` → two commits before HEAD
+
+You also learn how to **move branches forcibly**.
+<img width="1920" height="1020" alt="Screenshot 2025-12-17 112603" src="https://github.com/user-attachments/assets/ecf76393-4db1-4047-94bc-6a1b9099c80e" />
+
+
+ Commands Used
+
+```bash
+git checkout HEAD~1
+git branch -f main c6
+git branch -f bugfix c0
+```
+
+
+ Level 4: Reversing Changes in Git
+
+
+This level teaches how to **undo changes safely and unsafely** using `reset` and `revert`.
+
+<img width="1920" height="1020" alt="Screenshot 2025-12-23 110525" src="https://github.com/user-attachments/assets/b4b37725-a9d6-4005-87ee-817a7f78ea89" />
+
+
+ Commands Used
+
+```bash
+git checkout local
+git reset --hard c1
+git checkout pushed
+git revert pushed
+```
+
+
+
+
 
 
 
