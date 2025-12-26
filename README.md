@@ -156,6 +156,54 @@ git revert pushed
 ```
 
 
+ Level 1: Cherry-pick Intro
+
+`git cherry-pick` is used to **apply specific commits from one branch to another** without merging the entire branch.
+This is useful when:
+
+* You need only selected bug fixes
+* You want specific features without full branch history
+* You want clean and controlled commit history
+
+In this level:
+
+* Commits `c3`, `c4`, and `c7` exist on different branches
+* The goal is to **bring only these commits into the current branch**
+
+---
+<img width="1920" height="1020" alt="Screenshot 2025-12-23 110711" src="https://github.com/user-attachments/assets/50f50706-e6fa-4e17-87ce-54fbc41a506f" />
+
+
+### 💻 Git Command Used
+
+```bash
+git cherry-pick c3 c4 c7
+```
+
+
+ Level 2: Interactive Rebase Intro
+
+`git rebase -i` (interactive rebase) allows you to **edit, reorder, squash, or remove commits** before applying them to a new base.
+
+In this level:
+
+* The branch contains multiple commits
+* The goal is to **rebase the last 4 commits interactively**
+* You can clean up commit history before sharing code
+
+<img width="1920" height="1020" alt="Screenshot 2025-12-23 111305" src="https://github.com/user-attachments/assets/18b18a05-dbc5-4171-ab41-b183f80adbf0" />
+
+
+### 💻 Git Command Used
+
+```bash
+git rebase -i HEAD~4
+```
+
+
+
+
+
 
 
 
